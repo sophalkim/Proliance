@@ -101,7 +101,18 @@
     }
 
     function switchChart() {
-        alert("Hey phal");
+        if (chartOne == "bar") {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myBar = new Chart(ctx).Line(barChartData, {
+                responsive: true});
+            chartOne = "line";
+        } else {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myBar = new Chart(ctx).Bar(barChartData, {
+                responsive: true});
+            chartOne = "bar";
+        }
+        
     }
 
 </script>
