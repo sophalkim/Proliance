@@ -3,10 +3,16 @@
   <parameter name="SchoolContext-Web.config Connection String" description="SchoolContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;Initial Catalog=ContosoUniversity2;Integrated Security=SSPI;" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Users\\Billy\ Bob\\Desktop\\Practice\\ContosoUniversity\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SchoolContext']/@connectionString" />
   </parameter>
-  <parameter name="TicketDbContext-Web.config Connection String" description="TicketDbContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Tickets.mdf;Integrated Security=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Billy\ Bob\\Desktop\\Practice\\ContosoUniversity\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TicketDbContext']/@connectionString" />
+  <parameter name="TicketSalesDbContext-Web.config Connection String" description="TicketSalesDbContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\TicketSales.mdf;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Billy\ Bob\\Desktop\\Practice\\ContosoUniversity\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TicketSalesDbContext']/@connectionString" />
+  </parameter>
+  <parameter name="BudgetDbContext-Web.config Connection String" description="BudgetDbContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Budgets.mdf;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Billy\ Bob\\Desktop\\Practice\\ContosoUniversity\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BudgetDbContext']/@connectionString" />
   </parameter>
   <parameter name="SchoolContext_DatabasePublish-Web.config Connection String" description="SchoolContext_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="SchoolContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Users\\Billy\ Bob\\Desktop\\Practice\\ContosoUniversity\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SchoolContext_DatabasePublish']/@connectionString" />
+  </parameter>
+  <parameter name="BudgetDbContext_DatabasePublish-Web.config Connection String" description="BudgetDbContext_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="BudgetDbContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Billy\ Bob\\Desktop\\Practice\\ContosoUniversity\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BudgetDbContext_DatabasePublish']/@connectionString" />
   </parameter>
 </parameters>

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ContosoUniversity.Models.Ticket>
+﻿@model IEnumerable<ContosoUniversity.Models.Budget>
 
 @{
     ViewBag.Title = "Index";
@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Date)
+            @Html.DisplayNameFor(model => model.name)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.amount)
@@ -23,7 +23,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Date)
+            @Html.DisplayFor(modelItem => item.name)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.amount)

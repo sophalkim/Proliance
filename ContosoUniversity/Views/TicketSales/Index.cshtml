@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ContosoUniversity.Models.Ticket>
+﻿@model IEnumerable<ContosoUniversity.Models.TicketSales>
 
 @{
     ViewBag.Title = "Index";
@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.Date)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.amount)
+            @Html.DisplayNameFor(model => model.Amount)
         </th>
         <th></th>
     </tr>
@@ -26,7 +26,7 @@
             @Html.DisplayFor(modelItem => item.Date)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.amount)
+            @Html.DisplayFor(modelItem => item.Amount)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

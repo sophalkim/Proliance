@@ -12,7 +12,6 @@ namespace ContosoUniversity.Models
         public int ID { get; set; }
         [Display(Name = "Name")]
         public string name { get; set; }
-        [Range(1, 100)]
         [DataType(DataType.Currency)]
         [Display(Name = "Amount")]
         public decimal amount { get; set; }

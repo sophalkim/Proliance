@@ -1,24 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
+using System.Linq;
+using System.Web;
 
 namespace ContosoUniversity.Models
 {
-    public class Ticket
+    public class TicketSales
     {
         public int ID { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        [Display(Name = "Date")]
         public DateTime Date { get; set; }
-        [Range(1, 100)]
         [DataType(DataType.Currency)]
-        [Display(Name = "Amount")]
-        public decimal amount { get; set; }
+        public decimal Amount { get; set; }
     }
 
-    public class TicketDbContext : DbContext
+    public class TicketSalesDbContext : DbContext
     {
-        public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<TicketSales> TicketSales { get; set; }
     }
 }

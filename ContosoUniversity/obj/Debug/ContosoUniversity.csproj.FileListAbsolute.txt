@@ -81,7 +81,5 @@ C:\Users\Billy Bob\Desktop\Practice\ContosoUniversity\obj\Debug\ContosoUniversit
 C:\Users\Billy Bob\Desktop\Practice\ContosoUniversity\obj\Debug\ContosoUniversity.dll
 C:\Users\Billy Bob\Desktop\Practice\ContosoUniversity\obj\Debug\ContosoUniversity.pdb
 C:\Users\Billy Bob\Desktop\Practice\ContosoUniversity\obj\Debug\ContosoUniversity.Migrations.Changecurrency.resources
-C:\Users\Billy Bob\Desktop\Practice\ContosoUniversity\obj\Debug\ContosoUniversity.Migrations.TicketDbContext.InitialCreate.resources
-C:\Users\Billy Bob\Desktop\Practice\ContosoUniversity\obj\Debug\ContosoUniversity.Migrations.TicketDbContext.InitialTicket.resources
 C:\Users\Billy Bob\Desktop\Practice\ContosoUniversity\obj\Debug\ContosoUniversity.Migrations.BudgetDbContext.InitialCreate.resources
 C:\Users\Billy Bob\Desktop\Practice\ContosoUniversity\obj\Debug\ContosoUniversity.Migrations.BudgetDbContext.InitialBudget.resources

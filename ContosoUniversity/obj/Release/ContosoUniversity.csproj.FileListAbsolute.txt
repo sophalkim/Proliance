@@ -39,3 +39,6 @@ C:\Users\Billy Bob\Desktop\Practice\ContosoUniversity\obj\Release\ContosoUnivers
 C:\Users\Billy Bob\Desktop\Practice\ContosoUniversity\obj\Release\ContosoUniversity.csproj.GenerateResource.Cache
 C:\Users\Billy Bob\Desktop\Practice\ContosoUniversity\obj\Release\ContosoUniversity.dll
 C:\Users\Billy Bob\Desktop\Practice\ContosoUniversity\obj\Release\ContosoUniversity.pdb
+C:\Users\Billy Bob\Desktop\Practice\ContosoUniversity\obj\Release\ContosoUniversity.Migrations.Changecurrency.resources
+C:\Users\Billy Bob\Desktop\Practice\ContosoUniversity\obj\Release\ContosoUniversity.Migrations.BudgetDbContext.InitialCreate.resources
+C:\Users\Billy Bob\Desktop\Practice\ContosoUniversity\obj\Release\ContosoUniversity.Migrations.BudgetDbContext.InitialBudget.resources

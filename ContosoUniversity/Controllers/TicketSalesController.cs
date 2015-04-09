@@ -10,107 +10,107 @@ using ContosoUniversity.Models;
 
 namespace ContosoUniversity.Controllers
 {
-    public class TicketsController : Controller
+    public class TicketSalesController : Controller
     {
-        private TicketDbContext db = new TicketDbContext();
+        private TicketSalesDbContext db = new TicketSalesDbContext();
 
-        // GET: Tickets
+        // GET: TicketSales
         public ActionResult Index()
         {
-            return View(db.Tickets.ToList());
+            return View(db.TicketSales.ToList());
         }
 
-        // GET: Tickets/Details/5
+        // GET: TicketSales/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ticket ticket = db.Tickets.Find(id);
-            if (ticket == null)
+            TicketSales ticketSales = db.TicketSales.Find(id);
+            if (ticketSales == null)
             {
                 return HttpNotFound();
             }
-            return View(ticket);
+            return View(ticketSales);
         }
 
-        // GET: Tickets/Create
+        // GET: TicketSales/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Tickets/Create
+        // POST: TicketSales/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Date,amount")] Ticket ticket)
+        public ActionResult Create([Bind(Include = "ID,Date,Amount")] TicketSales ticketSales)
         {
             if (ModelState.IsValid)
             {
-                db.Tickets.Add(ticket);
+                db.TicketSales.Add(ticketSales);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(ticket);
+            return View(ticketSales);
         }
 
-        // GET: Tickets/Edit/5
+        // GET: TicketSales/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ticket ticket = db.Tickets.Find(id);
-            if (ticket == null)
+            TicketSales ticketSales = db.TicketSales.Find(id);
+            if (ticketSales == null)
             {
                 return HttpNotFound();
             }
-            return View(ticket);
+            return View(ticketSales);
         }
 
-        // POST: Tickets/Edit/5
+        // POST: TicketSales/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Date,amount")] Ticket ticket)
+        public ActionResult Edit([Bind(Include = "ID,Date,Amount")] TicketSales ticketSales)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(ticket).State = EntityState.Modified;
+                db.Entry(ticketSales).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(ticket);
+            return View(ticketSales);
         }
 
-        // GET: Tickets/Delete/5
+        // GET: TicketSales/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ticket ticket = db.Tickets.Find(id);
-            if (ticket == null)
+            TicketSales ticketSales = db.TicketSales.Find(id);
+            if (ticketSales == null)
             {
                 return HttpNotFound();
             }
-            return View(ticket);
+            return View(ticketSales);
         }
 
-        // POST: Tickets/Delete/5
+        // POST: TicketSales/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Ticket ticket = db.Tickets.Find(id);
-            db.Tickets.Remove(ticket);
+            TicketSales ticketSales = db.TicketSales.Find(id);
+            db.TicketSales.Remove(ticketSales);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
