@@ -9,6 +9,9 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+<p>
+    @ViewBag.searchString
+</p>
 <table class="table">
     <tr>
         <th>
@@ -38,17 +41,18 @@
 
 </table>
     <p>
-        @Html.ActionLink("Bar", "Index", new { chart = "bar" })
+        @Html.ActionLink("Bar", "Index", new { searchString = "bar" })
     </p>
     <p>
-        @Html.ActionLink("Pie", "Index", new { chart = "pie" })
+        @Html.ActionLink("Pie", "Index", new { searchString = "pie" })
     </p>
 
 <script src="~/Scripts/Chart.js-master/Chart.js"></script>
 <script>
     var randomScalingFactor = function () { return Math.round(Math.random() * 100) };
 
-    var chartOne = false;
+    var chartOne = "bar";
+
     @{
         int len = Model.Count();
         string x = "[";
@@ -61,6 +65,7 @@
             }
         }
         x += "]";
+
     }
     var data = @x;
     var barChartData = {
@@ -85,7 +90,7 @@
     }
     window.onload = function () {
         var ctx = document.getElementById("canvas").getContext("2d");
-        if (chartOne) {
+        if (chartOne == "bar") {
             window.myBar = new Chart(ctx).Bar(barChartData, {
                 responsive: true});
         } else {
@@ -96,4 +101,4 @@
 
 </script>
 
-<canvas id="canvas" width="400" height="400"></canvas>
+<canvas id="canvas" width="300" height="300"></canvas>
