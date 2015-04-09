@@ -37,12 +37,18 @@
 }
 
 </table>
+    <p>
+        @Html.ActionLink("Bar", "Index", new { chart = "bar" })
+    </p>
+    <p>
+        @Html.ActionLink("Pie", "Index", new { chart = "pie" })
+    </p>
 
 <script src="~/Scripts/Chart.js-master/Chart.js"></script>
 <script>
     var randomScalingFactor = function () { return Math.round(Math.random() * 100) };
 
-    @{ var total = 49; }
+    var chartOne = false;
     @{
         int len = Model.Count();
         string x = "[";
@@ -79,10 +85,15 @@
     }
     window.onload = function () {
         var ctx = document.getElementById("canvas").getContext("2d");
-        window.myBar = new Chart(ctx).Bar(barChartData, {
-            responsive: true
-        });
+        if (chartOne) {
+            window.myBar = new Chart(ctx).Bar(barChartData, {
+                responsive: true});
+        } else {
+            window.myBar = new Chart(ctx).Line(barChartData, {
+                responsive: true});
+        }
     }
 
 </script>
+
 <canvas id="canvas" width="400" height="400"></canvas>

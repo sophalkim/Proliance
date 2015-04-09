@@ -15,9 +15,12 @@ namespace ContosoUniversity.Controllers
         private TicketSalesDbContext db = new TicketSalesDbContext();
 
         // GET: TicketSales
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            return View(db.TicketSales.ToList());
+            var tickets = from t in db.TicketSales
+                          select t;
+            ViewBag.searchString = searchString;
+            return View(tickets);
         }
 
         // GET: TicketSales/Details/5
