@@ -45,6 +45,12 @@ namespace ContosoUniversity.Controllers
             return View();
         }
 
+        public ActionResult Chart()
+        {
+            ViewBag.Title = "Chart Page";
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             db.Dispose();
