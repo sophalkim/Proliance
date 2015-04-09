@@ -12,6 +12,7 @@
 <p>
     @ViewBag.searchString
 </p>
+<button class="btn btn-success" onclick="switchChart()">Switch Chart</button>
 <table class="table">
     <tr>
         <th>
@@ -97,6 +98,10 @@
             window.myBar = new Chart(ctx).Line(barChartData, {
                 responsive: true});
         }
+    }
+
+    function switchChart() {
+        alert("Hey phal");
     }
 
 </script>
