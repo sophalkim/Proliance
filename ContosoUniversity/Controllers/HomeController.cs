@@ -51,6 +51,12 @@ namespace ContosoUniversity.Controllers
             return View();
         }
 
+        // GET /home/javascript_practice
+        public ActionResult JavaScript_Practice()
+        {
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             db.Dispose();

@@ -197,9 +197,19 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\beachball.png" />
+    <Content Include="Content\images\beermug.jpg" />
+    <Content Include="Content\images\cat.png" />
     <Content Include="Content\images\disneyland.jpg" />
+    <Content Include="Content\images\ebay_logo.png" />
+    <Content Include="Content\images\ladybug.png" />
+    <Content Include="Content\images\meerkat.png" />
+    <Content Include="Content\images\milk.jpg" />
+    <Content Include="Content\images\mother_day.jpg" />
     <Content Include="Content\images\pie.jpg" />
     <Content Include="Content\images\tickets.jpg" />
+    <Content Include="Content\images\winter_night.png" />
+    <Content Include="Content\javascript_practice.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -251,6 +261,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\practice.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -303,6 +314,7 @@
     <Content Include="Views\TicketSales\Details.cshtml" />
     <Content Include="Views\TicketSales\Edit.cshtml" />
     <Content Include="Views\TicketSales\Index.cshtml" />
+    <Content Include="Views\Home\JavaScript_Practice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

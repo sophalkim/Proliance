@@ -4,15 +4,12 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Ticket Sales</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<p>
-    @ViewBag.searchString
-</p>
-<button class="btn btn-success" onclick="switchChart()">Switch Chart</button>
+
 <table class="table">
     <tr>
         <th>
@@ -41,12 +38,9 @@
 }
 
 </table>
-    <p>
-        @Html.ActionLink("Bar", "Index", new { searchString = "bar" })
-    </p>
-    <p>
-        @Html.ActionLink("Pie", "Index", new { searchString = "pie" })
-    </p>
+
+<hr />
+<button class="btn btn-warning" onclick="switchChart()">Switch Chart</button>
 
 <script src="~/Scripts/Chart.js-master/Chart.js"></script>
 <script>
