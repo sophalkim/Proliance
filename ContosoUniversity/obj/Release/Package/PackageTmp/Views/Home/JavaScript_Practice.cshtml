@@ -1,0 +1,371 @@
+﻿
+@{
+    ViewBag.Title = "JavaScript_Practice";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/javascript_practice.css">
+
+<h2>JavaScript_Practice</h2>
+
+<body role="document" onload="showClock()">
+    <div class="container">
+        <div class="page-header">
+            <h1 style="text-align: center;">JavaScript Practice</h1>
+        </div>
+
+        <!-- Display the Text -->
+
+        <button type="button" onclick="displayText()">Date</button>
+        <p id="demo"></p>
+
+
+        <hr>
+        <br>
+
+        <!-- Change Text -->
+
+        <button class="btn btn-primary" onclick="changeText()">Change Text</button>
+        <p id="ct">I am here.</p>
+
+        <hr>
+        <br>
+
+        <!-- Change/Switch Images -->
+        <img id="switchimage" src="~/Content/images/cat.png" onclick="switchImage()" width="200px" height="200px">
+
+        <hr>
+        <br>
+
+        <!-- Change Color Red -->
+        <h3 id="headertext">This is might turn Red.</h3>
+        <button class="btn btn-success" onclick="changeToRedText()">Red</button>
+
+
+        <hr>
+        <br>
+        <!-- Input Validation -->
+        <h3>Please Input a Number</h3>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" onclick="isNumber()">Go!</button>
+                    </span>
+                    <input type="text" class="form-control" id="inputbox">
+                </div><!-- /input-group -->
+                <p id="result"></p>
+            </div><!-- /.col-lg-6 -->
+        </div>
+
+
+        <!-- Document.write() -->
+        <hr>
+        <br>
+        <h1>Document.write()</h1>
+        <button class="btn btn-warning" onclick="docWrite()">Clear and Write</button>
+
+        <!-- Console.log() -->
+        <hr>
+        <br>
+        <h1>Console.log()</h1>
+        <button class="btn btn-danger" onclick="doConsole()">Secret Console Message</button>
+
+
+        <!-- Multiply Function -->
+        <hr>
+        <br>
+        <h3>Multiply</h3>
+        <div class="row">
+            <div class="col-sm-3">
+                #1
+                <input class="form-control" id="one"></input>
+            </div>
+            <div class="col-sm-3">
+                #2
+                <input class="form-control" id="two"></input>
+            </div>
+            <div class="col-sm-3">
+                <p id="product">Product</p>
+                <button class="btn btn-info" onclick="doMultiply()">Multiply</button>
+            </div>
+        </div>
+
+        <!-- JavaScript Objects -->
+        <hr>
+        <br>
+        <h3>JavaScript Objects</h3>
+        <p id="jobjects">Objects</p>
+        <button class="btn btn-primary" onclick="showJavaScriptObject()">Show Object</button>
+
+        <!-- this keyword -->
+        <hr>
+        <br>
+        <h3><strong>This</strong> keyWord</h3>
+        <button class="btn btn-warning" onclick="this.innerHTML = Date()">Click for Date</button>
+
+        <!-- Addition -->
+
+        <hr>
+        <br>
+        <h3>Addition</h3>
+        <div class="row">
+            <div class="col-sm-3">
+                #1
+                <input class="form-control" id="addition_input_one"></input>
+            </div>
+            <div class="col-sm-3">
+                #2
+                <input class="form-control" id="addition_input_two"></input>
+            </div>
+            <div class="col-sm-3">
+                <p id="sum">Sum</p>
+                <button class="btn btn-info" onclick="doAdd()">Add</button>
+            </div>
+        </div>
+
+        <hr>
+        <br>
+        <h3>Addition with Internal Function</h3>
+        <div class="row">
+            <div class="col-sm-3">
+                #1
+                <input class="form-control" id="addition_input_three"></input>
+            </div>
+            <div class="col-sm-3">
+                #2
+                <input class="form-control" id="addition_input_four"></input>
+            </div>
+            <div class="col-sm-3">
+                <p id="sum2">Sum</p>
+                <button class="btn btn-warning" onclick="doAddInternal()">Add</button>
+            </div>
+        </div>
+
+        <hr>
+        <br>
+        <h3>Type your name</h3>
+        <input class="form-control" id="word_input_1"></input>
+        <button class="btn btn-danger" onclick="showSentence()">Show Sentence</button>
+        <p id="word_sentence"></p>
+
+        <hr>
+        <br>
+        <h3 id="mouseover_header" onmouseover="showMouseOver()" onmouseout="hideMouseOver()">MouseOver</h3>
+        <p>Hover over MouseOver to change it's color.</p>
+        <p>Hover over picture to change it.</p>
+        <img id="mouseover_image" src="~/Content/images/ladybug.png" onmouseover="showNewImage()" onmouseout="hideNewImage()" width="200px" height="200px">
+
+        <hr>
+        <br>
+        <h3>OnKeyDown</h3>
+        <input id="hidden_dialog" class="form-control" onkeydown="showAlert()"></input>
+
+        <hr>
+        <br>
+        <h3>OnChange</h3>
+        <p id="paragraph_onChange">This sentence might change because I changed something else.</p>
+        <input class="form-control" id="form_onChange" onchange="onChangeInput()">Type Something.</input>
+
+        <hr>
+        <br>
+        <h1>This Keyword to Change Color of Text.</h1>
+
+        <hr>
+        <br>
+        <h1 id="hawaii" onmouseover="showHawaiiText()" onmouseout="hideHawaiiText()">I was in Hawaii for 2 weeks, I'm feeling a little rusty</h1>
+
+        <hr>
+        <br>
+        <h1 id="array_text" onmouseover="showArrayText()">Displaying Array</h1>
+
+        <hr>
+        <br>
+        <button class="btn btn-info" id="array_text2" onclick="showArrayText2()">Second way of Accessing Information from Key/Value</button>
+
+        <hr>
+        <br>
+        <button class="btn btn-danger" onclick="showArrayText3()">Accessing Object's Method</button>
+        <p id="array_text3"></p>
+
+        <hr>
+        <br>
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-success" onclick="showTextLength()" id="text_length_button">Type Something and Click</button>
+            </span>
+            <input class="form-control" id="text_length_input"></input>
+        </div>
+
+        <hr>
+        <br>
+        <h1 id="text_cool">This sentence contains the word "cool".</h1>
+        <button class="btn" onclick="showTextCool()" id="text_cool_button">Press to find where cool starts.</button>
+
+        <hr>
+        <br>
+        <h1>Replace Function</h1>
+        <p id="text_replace">This sentence is pretty short.</p>
+        <button class="btn btn-warning" onclick="textReplace()">Replace</button>
+
+        <hr>
+        <br>
+        <h1>To Upper Case</h1>
+        <h3 id="text_uppercase" onmouseover="showUpperCase()" onmouseout="hideUpperCase()">Make This sentence UpperCase.</h3>
+
+        <hr>
+        <br>
+        <h1>Split into an Array</h1>
+        <h3 id="text_split_array" onmouseover="showSplitArray()" onmouseout="hideSplitArray()">This sentence will split into an array, because of the comma.</h3>
+
+        <hr>
+        <br>
+        <h1>Strings can be Primitives or Objects</h1>
+        <p id="text_primitive" onmouseover="showPrimitive()" onmouseout="hidePrimitive()">This sentence contains a primitive String</p>
+
+        <hr>
+        <br>
+        <h1>Multiply to Infinity</h1>
+        <button class="btn btn-primary" onclick="multiplyInfinity()">Multiply</button>
+        <p id="text_infinity"></p>
+
+        <hr>
+        <br>
+        <h1>Random Function</h1>
+        <button class="btn btn-success" onclick="showRandomNumber()">Random</button>
+        <h3 id="text_random_number"></h3>
+
+        <hr>
+        <br>
+        <h1>Clock and Date</h1>
+        <h3 id="clock" onmouseover="showDate()" onmouseout="showClock()">Clock</h3>
+
+        <hr>
+        <br>
+        <h1>Creating and Displaying Arrays using Loop</h1>
+        <button class="btn btn-warning" onclick="showArray()">Create Array</button>
+        <h3 id="text_array"></h3>
+
+        <hr>
+        <br>
+        <h1>Sorting and Adding Unordered List to Array with Loop</h1>
+        <h3 id="text_sort" onmouseover="showSort()" onmouseout="hideSort()">Orange, Pear, Banana, Apple, Coconut.</h3>
+
+        <hr>
+        <br>
+        <h1>Join Method</h1>
+        <h3 id="text_join" onmouseover="showJoin()" onmouseout="hideJoin()">Red, Blue, Green, Yellow</h3>
+
+        <hr>
+        <br>
+        <h1 id="text_pop">Popping, Pushing, Shifting, UnShifting</h1>
+        <div class="btn-group">
+            <button type="button" class="btn btn-info btn-lg" onclick="showPop()">Pop</button>
+            <button type="button" class="btn btn-success btn-lg" onclick="showPush()">Push</button>
+            <button type="button" class="btn btn-danger btn-lg" onclick="showShift()">Shift</button>
+            <button type="button" class="btn btn-primary btn-lg" onclick="showUnShift()">UnShift</button>
+        </div>
+
+        <hr>
+        <br>
+        <h1>Are you Old Enough to Drink?</h1>
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-warning" type="button" onclick="showDrink()">
+                        Type Your Age
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+                <input type="text" class="form-control" id="input_age">
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+        <img id="image_drink" src="" width="200px" height="300px">
+
+        <hr>
+        <br>
+        <h1>Change Glyphicon and Button Color Programmatically</h1>
+        <button class="btn btn-info" onclick="changeIcon()" id="button_color">
+            Glyphicon
+            <span class="glyphicon glyphicon-star" id="button_icon"></span>
+        </button>
+
+        <hr>
+        <br>
+        <h1>Try and Catch Error</h1>
+        <p>The button will try to do something, but will produce an error instead.</p>
+        <button class="btn btn-primary" onclick="showError()">Do Something</button>
+
+        <hr>
+        <br>
+        <h1>JSON Objects</h1>
+        <button class="btn btn-danger" onclick="showJSON()">Show JSON</button>
+        <p id="text_json"></p>
+
+        <hr>
+        <br>
+        <h1 onmouseover="this.innerHTML = Date()" onmouseout="this.innerHTML = 'This keyword with on mouseover'">This keyword with onmouseover.</h1>
+
+        <hr>
+        <br>
+        <h1>Displaying an Array of Json Objects</h1>
+        <button class="btn btn-success" onclick="showJSONArray()">Display Json Array</button>
+        <p id="text_json_array"></p>
+
+        <hr>
+        <br>
+        <h1>Object Constructor and Displaying it.</h1>
+        <div class="input-group">
+            <span class="input-group-addon">First Name</span>
+            <input type="text" class="form-control" placeholder="Type Here" id="input_first_name">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Last Name</span>
+            <input type="text" class="form-control" placeholder="Type Here" id="input_last_name">
+            <span class="input-group-btn">
+                <button class="btn btn-warning" onclick="showConstructor()">Go</button>
+            </span>
+        </div>
+        <br>
+        <p id="text_constructor"></p>
+
+        <hr>
+        <br>
+        <h1>For In Loop</h1>
+        <button class="btn btn-primary" onclick="showForLoop()">Show Loop</button>
+        <p id="text_for_loop"></p>
+
+        <hr>
+        <br>
+        <h1>Arguments Object</h1>
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-warning" type="button" onclick="showArgument()">
+                        Type in some numbers
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+                <input type="text" class="form-control" id="input_arguments">
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+        <h3 id="text_arguments"></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="~/Scripts/practice.js"></script>
+
+    </div>
+
+</body>

@@ -37,3 +37,102 @@
 }
 
 </table>
+
+<hr />
+<button class="btn btn-warning" onclick="switchChart()">Switch Chart</button>
+
+<script src="~/Scripts/Chart.js-master/Chart.js"></script>
+<script>
+    var randomScalingFactor = function () { return Math.round(Math.random() * 100) };
+
+    var chartOne = "bar";
+
+    @{
+        int len = Model.Count();
+        string x = "[";
+        foreach (var item in Model)
+        {
+            x += item.amount;
+            if (item != Model.Last())
+            {
+                x += ",";
+            }
+        }
+        x += "]";
+
+    }
+    var data = @x;
+    var barChartData = {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [
+			{
+			    fillColor: "rgba(220,220,220,0.5)",
+			    strokeColor: "rgba(220,220,220,0.8)",
+			    highlightFill: "rgba(220,220,220,0.75)",
+			    highlightStroke: "rgba(220,220,220,1)",
+			    data: data
+			},
+			{
+			    fillColor: "rgba(151,187,205,0.5)",
+			    strokeColor: "rgba(151,187,205,0.8)",
+			    highlightFill: "rgba(151,187,205,0.75)",
+			    highlightStroke: "rgba(151,187,205,1)",
+			    data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+			}
+        ]
+
+    }
+    
+        
+    
+    var pieData = [
+        {
+            value: 300,
+            color:"#F7464A",
+            highlight: "#FF5A5E",
+            label: "Red"
+        },
+        {
+            value: 50,
+            color: "#46BFBD",
+            highlight: "#5AD3D1",
+            label: "Green"
+        },
+        {
+            value: 100,
+            color: "#FDB45C",
+            highlight: "#FFC870",
+            label: "Yellow"
+        }
+    ]
+     
+
+    window.onload = function () {
+        var ctx = document.getElementById("canvas").getContext("2d");
+        if (chartOne == "bar") {
+            window.myBar = new Chart(ctx).Pie(pieData, {
+                responsive: true});
+        } else {
+            window.myBar = new Chart(ctx).Line(barChartData, {
+                responsive: true});
+        }
+    }
+
+    function switchChart() {
+        if (chartOne == "bar") {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myBar = new Chart(ctx).Pie(barChartData, {
+                responsive: true});
+            chartOne = "line";
+        } else {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myBar = new Chart(ctx).PolarArea(barChartData, {
+                responsive: true});
+            chartOne = "bar";
+        }
+
+    }
+
+</script>
+
+<canvas id="canvas" width="300" height="300"></canvas>
